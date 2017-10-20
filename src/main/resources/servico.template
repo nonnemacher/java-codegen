@@ -1,0 +1,36 @@
+{{#servico}}
+
+package {{pacote}};
+
+import javax.ejb.Stateless;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+/**
+ * @author {{autor}}
+ * @version {{versao}}
+ */
+@WebService(serviceName = "{{serviceName}}Service", targetNamespace = "{{nameSpace}}")
+@Stateless
+public class {{nome}}Service implements {{local}}Local {
+    
+    @PersistenceContext(name = NAME, unitName = UNIT_NAME)
+    private EntityManager entityManager;
+
+    {{#operacoes}}
+    
+    @Override
+    @WebMethod
+    @WebResult(name = "{{saidaCase}}")
+    public {{saida}} {{nome}}(@WebParam(name = "{{entradaCase}}") {{entrada}} {{entradaCase}}) {
+        return new {{helper}}Helper().{{nome}}(entityManager, {{entradaCase}});
+    }
+
+    {{/operacoes}}
+
+}
+{{/servico}}

@@ -1,0 +1,23 @@
+{{#servico}}
+
+package {{pacote}};
+
+import javax.persistence.EntityManager;
+
+
+/**
+ * @author {{autor}}
+ * @version {{versao}}
+ */
+public class {{helper}}Helper  {
+    
+    {{#operacoes}}
+    
+    public {{saida}} {{nome}}(final EntityManager entityManager, final {{entrada}} {{entradaCase}}) {
+        return new {{saida}}();
+    }
+
+    {{/operacoes}}
+
+}
+{{/servico}}

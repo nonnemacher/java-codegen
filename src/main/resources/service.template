@@ -1,0 +1,22 @@
+{{#classCode}}
+
+package {{packageName}};
+
+import javax.ejb.Stateless;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+
+/**
+ * @author {{AUTOR}}
+ * @version {{VERSION}}
+ */
+@WebService(serviceName = "{{serviceName}}", targetNamespace = "{{serviceNameSpace}}")
+@Stateless
+public class {{className}}Service implements {{className}}Local {
+
+
+}
+
+{{/classCode}}

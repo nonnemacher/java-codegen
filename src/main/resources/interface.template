@@ -1,0 +1,22 @@
+{{#servico}}
+
+package {{pacote}};
+
+import javax.ejb.Local;
+
+/**
+ * @author {{autor}}
+ * @version {{versao}}
+ */
+@Local
+public interface {{local}}Local {
+    
+    {{#operacoes}}
+    
+    {{saida}} {{nome}}({{entrada}} {{entradaCase}});
+
+    {{/operacoes}}
+
+}
+
+{{/servico}}

@@ -1,0 +1,15 @@
+{{#operacao}}
+package {{packageName}};
+
+import java.io.Serializable;
+
+/**
+ * @author {{AUTOR}}
+ * @version {{VERSION}}
+ */
+public class {{saida}} implements Serializable {
+
+    
+
+}
+{{/operacao}}
